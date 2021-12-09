@@ -4,9 +4,13 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
-.container {
-  width: 30%;
-  height: 30%;
+.chart-container {
+	width: 500px;
+	height: 600px;
+}
+.btnContainer{
+  width: max-content;
+  height: min-content;
 }

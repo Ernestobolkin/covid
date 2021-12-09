@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>COVID-19</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
-  <div class="container">
-    <canvas id="myChart" width="100" height="100"></canvas>
-  </div>
-  <div class="btnContainer">
-    <button class="btnWorld" type="button">World</button>
-    <button class="btnAsia" type="button">Asia</button>
-    <button class="btnAfrica" type="button">Africa</button>
-    <button class="btnAmerica" type="button">America</button>
-    <button class="btnEurope" type="button">Europe</button>
-  </div>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="index.js"></script>
-</body>
-
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+		<div class="chart-container">
+			<canvas id="myChart" width="100" height="100"></canvas>
+		</div>
+		<div class="btnContainer">
+			<button class="btnWorld" type="button">World</button>
+			<button class="btnAsia" type="button">Asia</button>
+			<button class="btnAfrica" type="button">Africa</button>
+			<button class="btnAmerica" type="button">America</button>
+			<button class="btnEurope" type="button">Europe</button>
+		</div>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="index.js"></script>
+	</body>
 </html>
