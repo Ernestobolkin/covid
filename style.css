@@ -14,9 +14,6 @@ header{
   background-color: #393E46;
   box-shadow: 0px 1px 25px -4px #393E46;
 }
-.covidLogo{
-  color: red;
-}
 .chart-container {
   margin-top: 5%;
 	width: 500px;
@@ -26,7 +23,7 @@ header{
   margin: 10px 0;
 }
 
-.n1 {
+.buttons {
   align-items: center;
   appearance: none;
   background-color: #fff;
@@ -59,39 +56,40 @@ header{
   will-change: transform,opacity;
   z-index: 0;
   border: 2px solid #ffffff00;
+  /* margin: .2rem .2rem; */
 }
 
-.n1:hover {
+.buttons:hover {
   background: #F6F9FE;
   color: #00ADB5;
 }
 
-.n1:active {
+.buttons:active {
   box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
   outline: none;
 }
 
-.n1:focus {
+.buttons:focus {
   outline: none;
   border: 2px solid #00ADB5;
 }
 
-.n1:not(:disabled) {
+.buttons:not(:disabled) {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
 
-.n1:not(:disabled):hover {
+.buttons:not(:disabled):hover {
   box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
 }
 
-.n1:not(:disabled):focus {
+.buttons:not(:disabled):focus {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
 
-.n1:not(:disabled):active {
+.buttons:not(:disabled):active {
   box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
 }
 
-.n1:disabled {
+.buttons:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
