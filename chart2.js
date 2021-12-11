@@ -5,6 +5,7 @@ const generateChart2 = (a,b,c,d) => {
   const data = [a, b, c, d];
   if (myChart2 !== "") myChart2.destroy();
   myChart2 = new Chart(ctx2, {
+    plugins:[ChartDataLabels],
     type: "pie",
     data: {
       labels: ["Deaths", "Confirmed", "Recovered", "Critical"],
@@ -27,6 +28,10 @@ const generateChart2 = (a,b,c,d) => {
             "rgba(153, 102, 255, 1)",
           ],
           borderWidth: 1,
+          datalabels:{
+            color:'black',
+            anchor:'center',
+          },
         },
       ],
     },

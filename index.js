@@ -4,30 +4,45 @@ const regions = {
     confirmed: 0,
     recovered: 0,
     critical: 0,
+    newConfirmed: 0,
+    newDeaths: 0,
+    newRecovered: 0,
   },
   africa: {
     deaths: 0,
     confirmed: 0,
     recovered: 0,
     critical: 0,
+    newConfirmed: 0,
+    newDeaths: 0,
+    newRecovered: 0,
   },
   americas: {
     deaths: 0,
     confirmed: 0,
     recovered: 0,
     critical: 0,
+    newConfirmed: 0,
+    newDeaths: 0,
+    newRecovered: 0,
   },
   europe: {
     deaths: 0,
     confirmed: 0,
     recovered: 0,
     critical: 0,
+    newConfirmed: 0,
+    newDeaths: 0,
+    newRecovered: 0,
   },
   asia: {
     deaths: 0,
     confirmed: 0,
     recovered: 0,
     critical: 0,
+    newConfirmed: 0,
+    newDeaths: 0,
+    newRecovered: 0,
   },
 };
 
@@ -41,17 +56,40 @@ const ctx = document.getElementById("myChart");
 let myChart = "";
 
 const generateChart = (resData) => {
+  myLabels = [];
+  if (
+    resData.newConfirmed === 0 &&
+    resData.newDeaths === 0 &&
+    resData.newRecovered === 0
+  ) {
+    myLabels = ["Deaths", "Confirmed", "Recovered", "Critical"];
+  } else{
+    myLabels= [
+      "Deaths",
+      "Confirmed",
+      "Recovered",
+      "Critical",
+      "New Confirmed",
+      "New Deaths",
+      "New Recovered",
+    ]
+  }
+  console.log(resData);
   const data = [
     resData.deaths,
     resData.confirmed,
     resData.recovered,
     resData.critical,
+    resData.newConfirmed,
+    resData.newDeaths,
+    resData.newRecovered,
   ];
   if (myChart !== "") myChart.destroy();
   myChart = new Chart(ctx, {
+    plugins:[ChartDataLabels],
     type: "bar",
     data: {
-      labels: ["Deaths", "Confirmed", "Recovered", "Critical"],
+      labels:myLabels,
       datasets: [
         {
           label: "Covid",
@@ -71,6 +109,11 @@ const generateChart = (resData) => {
             "rgba(153, 102, 255, 1)",
           ],
           borderWidth: 1,
+          datalabels:{
+            color:'black',
+            anchor:'end',
+            align:'top',
+          },
         },
       ],
     },
@@ -98,6 +141,15 @@ const getRegionData = async (data, region) => {
         regions[region].confirmed += response.data.data.latest_data.confirmed;
         regions[region].recovered += response.data.data.latest_data.recovered;
         regions[region].critical += response.data.data.latest_data.critical;
+        if (response.data.data.timeline[0] !== undefined) {
+          regions[region].newConfirmed +=
+            response.data.data.timeline[0].new_confirmed;
+          regions[region].newDeaths +=
+            response.data.data.timeline[0].new_deaths;
+          regions[region].newRecovered +=
+            response.data.data.timeline[0].new_recovered;
+        }
+
         switch (region) {
           case "asia":
             asia.push(response.data.data);
@@ -155,23 +207,20 @@ btnWorld.addEventListener("click", () => {
 });
 btnAfrica.addEventListener("click", () => {
   generateChart(regions.africa);
-  generateBtn(africa)
+  generateBtn(africa);
 });
 btnAsia.addEventListener("click", () => {
   generateChart(regions.asia);
-  generateBtn(asia)
+  generateBtn(asia);
 });
 btnAmerica.addEventListener("click", () => {
   generateChart(regions.americas);
-  generateBtn(america)
+  generateBtn(america);
 });
 btnEurope.addEventListener("click", () => {
   generateChart(regions.europe);
-  generateBtn(europe)
+  generateBtn(europe);
 });
-
-
-
 
 window.addEventListener("load", () => {
   getCountries("world").catch((err) => {
