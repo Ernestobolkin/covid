@@ -21,7 +21,7 @@
 .innerContainer {
   color: var(--lightDark-color);
   background-color: #eeeeee;
-  padding: 4% 11%;
+  padding: 1% ;
   border: 20px outset #00adb5;
   display: flex;
   flex-direction: column;
@@ -29,37 +29,37 @@
   text-align: center;
   border-radius: 0 40px 0 0;
   width: 50%;
+  height: min-content;
 }
 .loadingParagraph {
-  font-size: 2rem;
+  font-size: 2vw;
 }
 .continue {
   width: min-content;
-  font-size: 1.6rem;
+  font-size: 1.6vw;
   height: 2%;
 }
 .loadingIcon {
-  font-size: 4rem;
+  font-size: 4vw;
 }
 .loadingIcon i{
   color: red;
 }
 
 .loadingIcon i{
-  /* -webkit-animation: breathing 5s ease-out infinite normal; */
-  animation:breathing  5s ease-out infinite normal;
+  animation:breathing  3s ease-out infinite normal;
 }
 @keyframes breathing{
   0%{
-    transform: scale(0.9);
-  }
-  25%{
     transform: scale(1);
   }
+  25%{
+    transform: scale(1.1);
+  }
   60%{
-    transform: scale(0.9);
+    transform: scale(1);
   }
   100%{
-    transform: scale(0.9);
+    transform: scale(1);
   }
 }

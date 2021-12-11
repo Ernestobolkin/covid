@@ -39,7 +39,6 @@ const generateChart2 = (a,b,c,d) => {
     },
   });
 };
-// generateChart2();
 
 function myFunction() {
   let input, filter, ul, li, a, i, txtValue;
@@ -59,13 +58,6 @@ function myFunction() {
 }
 
 const ul = document.querySelector("#myUL");
-
-const getCountry = (name) => {
-  // const button = .querySelectorAll("")
-  // document.querySelectorAll(`[data-name*="funnel-chart-percent"]`)
-  // console.log(name);
-};
-
 let testingArr = [];
 
 const generateBtn = (countries) => {
@@ -82,8 +74,3 @@ const generateBtn = (countries) => {
   });
   ul.innerHTML = buttons;
 };
-
-// deaths,
-// confirmed,
-// recovered,
-// critical

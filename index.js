@@ -91,9 +91,8 @@ let europe = [];
 const getRegionData = async (data, region) => {
   let data2 = [];
   const baseURLCovid = "https://corona-api.com/countries";
-  let ind = 0;
   if (region !== "world") {
-    data.data.forEach((country, index) => {
+    data.data.forEach((country) => {
       axios.get(`${baseURLCovid}/${country.cca2}`).then((response) => {
         regions[region].deaths += response.data.data.latest_data.deaths;
         regions[region].confirmed += response.data.data.latest_data.confirmed;
@@ -170,6 +169,9 @@ btnEurope.addEventListener("click", () => {
   generateChart(regions.europe);
   generateBtn(europe)
 });
+
+
+
 
 window.addEventListener("load", () => {
   getCountries("world").catch((err) => {
