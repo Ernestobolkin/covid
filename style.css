@@ -21,11 +21,13 @@ header{
   font-family:Arial, Helvetica, sans-serif;
   cursor:default;
 }
+i{
+  cursor: pointer;
+}
 .logo i {
   color: red;
   font-size: 1.3rem;
   transform: translateX(5px);
-  cursor: pointer;
 }
 .logo i:hover{
   color: #EEEEEE;

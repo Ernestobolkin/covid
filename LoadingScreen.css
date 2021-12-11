@@ -30,9 +30,6 @@
   border-radius: 0 40px 0 0;
   width: 50%;
 }
-.loadingIcon {
-  font-size: 4rem;
-}
 .loadingParagraph {
   font-size: 2rem;
 }
@@ -40,4 +37,29 @@
   width: min-content;
   font-size: 1.6rem;
   height: 2%;
+}
+.loadingIcon {
+  font-size: 4rem;
+}
+.loadingIcon i{
+  color: red;
+}
+
+.loadingIcon i{
+  /* -webkit-animation: breathing 5s ease-out infinite normal; */
+  animation:breathing  5s ease-out infinite normal;
+}
+@keyframes breathing{
+  0%{
+    transform: scale(0.9);
+  }
+  25%{
+    transform: scale(1);
+  }
+  60%{
+    transform: scale(0.9);
+  }
+  100%{
+    transform: scale(0.9);
+  }
 }
