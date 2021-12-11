@@ -132,7 +132,6 @@ let africa = [];
 let america = [];
 let europe = [];
 const getRegionData = async (data, region) => {
-  let data2 = [];
   const baseURLCovid = "https://corona-api.com/countries";
   if (region !== "world") {
     data.data.forEach((country) => {
@@ -182,10 +181,7 @@ const getRegionData = async (data, region) => {
   }
 };
 const getCountries = async (region) => {
-  let data = [];
   let countries;
-  const baseURL =
-    "https://intense-mesa-62220.herokuapp.com/restcountries.herokuapp.com/api/v1/";
   console.log("Called API");
   if (region !== "world") {
     countries = await axios.get(

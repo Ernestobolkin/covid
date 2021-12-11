@@ -1,3 +1,34 @@
-@media screen and (max-width:1000px){
+.rotateContainer{
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  z-index: 1000;
+}
+.rotate{
+  font-size: 4vh;
+}
+@media screen and (max-width:800px){
+  .rotateContainer{
+    display: flex;
+  }
+}
 
+
+@media screen and (max-height:450px) and (min-width:600px){
+  .chart-container{
+    margin-top: 15vh;
+    width: 60%;
+  }
+  .rotateContainer{
+    display: none;
+  }
+  .buttons{
+    height: 6vh;
+    font-size:1.5vw;
+  }
 }
