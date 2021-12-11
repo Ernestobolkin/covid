@@ -1,0 +1,43 @@
+.sectionNumber2{
+  display: none;
+}
+:root {
+  --white-color: #eeeeee;
+  --dark-color: #222831;
+  --lightDark-color: #393e46;
+  --ocean-color: #00adb5;
+}
+.loadingScreen {
+  z-index: 100;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerContainer {
+  color: var(--lightDark-color);
+  background-color: #eeeeee;
+  padding: 4% 11%;
+  border: 20px outset #00adb5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 40px 0 0;
+  width: 50%;
+}
+.loadingIcon {
+  font-size: 4rem;
+}
+.loadingParagraph {
+  font-size: 2rem;
+}
+.continue {
+  width: min-content;
+  font-size: 1.6rem;
+  height: 2%;
+}

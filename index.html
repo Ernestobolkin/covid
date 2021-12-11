@@ -8,12 +8,30 @@
   <title>COVID-19</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./serach.css" />
+  <link rel="stylesheet" href="./LoadingScreen.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 </head>
 
 <body>
+  <!-- loading screen -->
+  <div class="loadingScreen">
+    <div class="innerContainer">
+      <span class="loadingIcon">
+        <p>COVID TRACKER <i class="fas fa-lungs-virus"></i></p>
+      </span>
+      <div class="loadingParagraph">
+        <p>welcome.<br> This Website will show you the statistics about COVID around the world.</p> <br>
+      </div>
+      <button class="buttons continue">continue</button>
+    </div>
+  </div>
+  <!-- end of loading screen -->
+
+  <!-- statistics page -->
   <header>
     <div class="logo">
-      <p>COVID-19</p>
+      <p>COVID TRACKER <span class="icon"></span><i class="fas fa-lungs-virus"></i></span></p>
     </div>
   </header>
   <div class="pageContainer">
@@ -29,14 +47,14 @@
         <button class="btnEurope buttons" type="button">Europe</button>
       </div>
     </div>
+    <!-- char 2  -->
     <div class="sectionNumber2">
-      <!-- char 2  -->
       <div class="chart-container">
         <canvas id="myChart2" width="100" height="100"></canvas>
       </div>
-          <!-- search -->
+      <!-- search -->
       <div class="searchContainer">
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by name" title="Type in a name">
         <div class="countyBtnContainer">
           <ul id="myUL">
           </ul>
@@ -48,6 +66,7 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="index.js"></script>
   <script src="chart2.js"></script>
+  <script src="loading.js"></script>
 </body>
 
 </html>
