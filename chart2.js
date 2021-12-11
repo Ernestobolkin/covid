@@ -42,7 +42,7 @@ const generateChart2 = (a,b,c,d) => {
 // generateChart2();
 
 function myFunction() {
-  var input, filter, ul, li, a, i, txtValue;
+  let input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   ul = document.getElementById("myUL");

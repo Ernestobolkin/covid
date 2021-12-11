@@ -11,41 +11,43 @@
 </head>
 
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
   <header>
     <div class="logo">
-      <p>C<span class="covidLogo">🦠</span>VID-19</p>
+      <p>COVID-19</p>
     </div>
   </header>
-  <div class="chart-container">
-    <canvas id="myChart" width="100" height="100"></canvas>
-  </div>
-
-  <div class="btnContainer">
-    <button class="btnWorld buttons" type="button">World</button>
-    <button class="btnAsia buttons" type="button">Asia</button>
-    <button class="btnAfrica buttons" type="button">Africa</button>
-    <button class="btnAmerica buttons" type="button">America</button>
-    <button class="btnEurope buttons" type="button">Europe</button>
-  </div>
-
-  <!-- search -->
-  <div class="searchContainer">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-    <div class="countyBtnContainer">
-      <ul id="myUL">
-      </ul>
+  <div class="pageContainer">
+    <div class="sectionNumber1">
+      <div class="chart-container">
+        <canvas id="myChart" width="100" height="100"></canvas>
+      </div>
+      <div class="btnContainer">
+        <button class="btnWorld buttons" type="button">World</button>
+        <button class="btnAsia buttons" type="button">Asia</button>
+        <button class="btnAfrica buttons" type="button">Africa</button>
+        <button class="btnAmerica buttons" type="button">America</button>
+        <button class="btnEurope buttons" type="button">Europe</button>
+      </div>
+    </div>
+    <div class="sectionNumber2">
+      <!-- char 2  -->
+      <div class="chart-container">
+        <canvas id="myChart2" width="100" height="100"></canvas>
+      </div>
+          <!-- search -->
+      <div class="searchContainer">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        <div class="countyBtnContainer">
+          <ul id="myUL">
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- char 2  -->
-  <div class="chart-container">
-    <canvas id="myChart2" width="100" height="100"></canvas>
-  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="index.js"></script>
   <script src="chart2.js"></script>
-
 </body>
 
 </html>
